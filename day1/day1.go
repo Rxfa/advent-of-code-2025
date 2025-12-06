@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -46,7 +46,7 @@ func secretEntrance(documentPath string) (int, error) {
 			return 0, err
 		}
 		dial += nextRotation
-		dial = (dial%100 + 100) % 100
+		dial %= 100
 		if dial == 0 {
 			password++
 		}
@@ -54,12 +54,12 @@ func secretEntrance(documentPath string) (int, error) {
 	return password, nil
 }
 
-func main() {
-	filePath := "input.txt"
+func Day1() {
+	filePath := "day1/input.txt"
 	password, err := secretEntrance(filePath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Printf("The password is: %d\n", password)
+	fmt.Printf("[day 1] The password is: %d\n", password)
 }
