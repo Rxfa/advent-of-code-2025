@@ -52,5 +52,5 @@ func Day3() {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Printf("[day 3] The solution is: %d\n", solution)
+	fmt.Printf("[day 3 - lobby] The solution is: %d\n", solution)
 }

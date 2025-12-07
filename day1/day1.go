@@ -61,5 +61,5 @@ func Day1() {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Printf("[day 1] The password is: %d\n", password)
+	fmt.Printf("[day 1 - Secret Entrance] The password is: %d\n", password)
 }
